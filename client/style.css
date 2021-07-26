@@ -1,0 +1,74 @@
+* {
+  color: white;
+}
+
+header {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./img/pizza-back.png');
+  background-position: center;
+  background-color:rgba(0,0,0,0.9);
+}
+
+.header-content {
+  margin-top: 200px;
+  width: 1200px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+img {
+  background-color: none;
+  cursor: pointer;
+}  
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 25px;
+}
+
+nav div { 
+  height: 25px;
+  width: 100px;
+  padding: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+nav div:hover {
+  border-radius: 2px;
+  background-color: rgb(216, 158, 0);
+}
+
+.contacts {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.contacts a {
+  
+  text-decoration: none;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+.phone-numbers {
+
+}
