@@ -1,3 +1,7 @@
+:root {
+  --color-dark: rgba(0,0,0,0.9);
+}
+
 * {
   color: white;
 }
@@ -10,7 +14,7 @@ header {
   justify-content: center;
   background-image: url('./img/pizza-back.png');
   background-position: center;
-  background-color:rgba(0,0,0,0.9);
+  background-color: var(--color-dark);
 }
 
 .header-content {
@@ -72,9 +76,14 @@ nav div:hover {
 
 }
 
+main {
+  background-color: var(--color-dark);
+}
+
 .search-cart-container {
   border-top: 2px solid white;
-  background-color:rgba(0,0,0,0.9);
+  border-bottom: 2px solid white;
+  /* background-color:var(--color-dark); */
   height: 62px;
   display: flex;
   flex-direction: row;
@@ -88,7 +97,6 @@ nav div:hover {
 .search-container {
   display: flex;
   align-items: center;
-  /* margin-left: 40px; */
 }
 
 .search {
@@ -145,6 +153,61 @@ nav div:hover {
   cursor: pointer;
 }
 
-.pizzas-container {
-  height: 5000px;
+.pizza-cards-container {
+  margin-top: 20px;
+  height: 1002px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.pizza-card {
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.pizza-name {
+
+}
+
+.pizza-photo-container {
+  height: 222px;
+  width: 296px;
+}
+
+.pizza-photo {
+
+}
+
+.pizza-description {
+
+}
+
+.buttons-block {
+
+}
+
+.button {
+  color: black;
+  background-color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  color: white;
+  background-color: var(--color-dark);
+}
+
+.pizza-add-to-cart {
+  background-color: red;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -self: flex-end;
 }
