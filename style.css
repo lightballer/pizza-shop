@@ -17,7 +17,6 @@ header {
   margin-top: 200px;
   width: 1200px;
   display: flex;
-  align-self: center;
   align-items: center;
   justify-content: space-between;
 }
@@ -71,4 +70,81 @@ nav div:hover {
 
 .phone-numbers {
 
+}
+
+.search-cart-container {
+  border-top: 2px solid white;
+  background-color:rgba(0,0,0,0.9);
+  height: 62px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stub {
+  width: 200px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  /* margin-left: 40px; */
+}
+
+.search {
+  color: black;
+  height: 25px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 3px;
+  outline: black;
+}
+
+.search:focus {
+  outline: white;
+}
+
+.search-button {
+  margin-left: 3px;
+  height: 23px;
+  width: 23px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-button::after {
+  position: relative;
+  right: 2px;
+  bottom: 1px;
+  font-family: FontAwesome;
+  content: "\f002";
+  font-size: 16px;
+  color: #201b1b;
+}
+
+.cart-container {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.cart {
+  height: 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+}
+
+.cart-icon {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.pizzas-container {
+  height: 5000px;
 }
