@@ -1,5 +1,6 @@
 :root {
   --color-dark: rgba(0,0,0,0.9);
+  --color-orange: rgb(221, 138, 4);
 }
 
 * {
@@ -27,9 +28,10 @@ header {
 }
 
 
-img {
+.header-content img {
   background-color: none;
   cursor: pointer;
+  padding-left: 30px;
 }  
 
 nav {
@@ -53,7 +55,7 @@ nav div {
 
 nav div:hover {
   border-radius: 2px;
-  background-color: rgb(221, 138, 4);
+  background-color: var(--color-orange);
 }
 
 .contacts {
@@ -65,7 +67,6 @@ nav div:hover {
 }
 
 .contacts a {
-  
   text-decoration: none;
 }
 
@@ -83,9 +84,7 @@ main {
 
 .search-cart-container {
   border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  /* background-color:var(--color-dark); */
-  height: 62px;
+  border-bottom: 2px solid white;  height: 62px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -141,11 +140,15 @@ main {
   margin-right: 20px;
 }
 
-.cart {
+.cart-price {
   height: 20px;
   cursor: pointer;
   margin-bottom: 5px;
   text-overflow: ellipsis;
+}
+
+.cart-price:hover {
+  text-decoration: underline;
 }
 
 .cart-icon {
@@ -171,38 +174,59 @@ main {
   border-radius: 5px;
 }
 
-.pizza-name {
-
-}
-
 .pizza-photo-container {
   height: 222px;
   width: 296px;
 }
 
 .pizza-photo {
-
+  
 }
 
-.pizza-description {
+.pizza-description-content {
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
 
+.pizza-name {
+  padding-left: 27px;
+}
+
+.pizza-composition {
+  padding-left: 27px;
+  color:rgb(193, 193, 193);
 }
 
 .buttons-block {
-
+  display: flex;
+  justify-content: center;
 }
 
 .button {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
   outline: none;
-  border: none;
+  border: 1px solid var(--color-orange);
   cursor: pointer;
 }
 
-.active {
-  color: white;
-  background-color: var(--color-dark);
+.button:hover {
+  background-color: rgb(72, 71, 71);
+  color: rgb(193, 193, 193);
+}
+
+.active, .active:hover {
+  color: black;
+  background-color: white;
+}
+
+.pizza-card-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
 }
 
 .pizza-add-to-cart {
@@ -210,5 +234,9 @@ main {
   outline: none;
   border: none;
   cursor: pointer;
-  -self: flex-end;
+}
+
+.pizza-add-to-cart:hover {
+  background-color: rgb(189, 3, 3);
+  color: rgb(193, 193, 193);
 }
