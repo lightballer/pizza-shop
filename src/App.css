@@ -1,11 +1,12 @@
 :root {
-  --color-dark: rgba(0,0,0,0.9);
+  --color-dark: rgba(0, 0, 0, 0.9);
   --color-orange: rgb(221, 138, 4);
 }
 
 * {
   color: white;
   font-family: 'Monda', sans-serif;
+  font-weight: 500;
 }
 
 header {
@@ -14,7 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('./img/pizza-back.png');
+  background-image: url('./images/pizza-back.png');
   background-position: center;
   background-color: var(--color-dark);
 }
@@ -27,12 +28,11 @@ header {
   justify-content: space-between;
 }
 
-
 .header-content img {
   background-color: none;
   cursor: pointer;
   padding-left: 30px;
-}  
+}
 
 nav {
   display: flex;
@@ -41,7 +41,7 @@ nav {
   font-size: 25px;
 }
 
-nav div { 
+nav div {
   height: 25px;
   width: max-content;
   padding: 20px;
@@ -75,7 +75,8 @@ nav div:hover {
 }
 
 .phone-numbers {
-
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -84,7 +85,8 @@ main {
 
 .search-cart-container {
   border-top: 2px solid white;
-  border-bottom: 2px solid white;  height: 62px;
+  border-bottom: 2px solid white;
+  height: 62px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -126,7 +128,7 @@ main {
   right: 2px;
   bottom: 1px;
   font-family: FontAwesome;
-  content: "\f002";
+  content: '\f002';
   font-size: 16px;
   color: #201b1b;
 }
@@ -180,7 +182,6 @@ main {
 }
 
 .pizza-photo {
-  
 }
 
 .pizza-description-content {
@@ -197,7 +198,7 @@ main {
 
 .pizza-composition {
   padding-left: 27px;
-  color:rgb(193, 193, 193);
+  color: rgb(193, 193, 193);
 }
 
 .buttons-block {
@@ -218,7 +219,8 @@ main {
   color: rgb(193, 193, 193);
 }
 
-.active, .active:hover {
+.active,
+.active:hover {
   color: black;
   background-color: white;
 }
@@ -226,7 +228,7 @@ main {
 .pizza-card-footer {
   display: flex;
   justify-content: space-around;
-  align-items:center;
+  align-items: center;
 }
 
 .pizza-add-to-cart {
