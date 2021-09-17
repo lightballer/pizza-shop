@@ -1,0 +1,25 @@
+.cart_container {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.cart_price {
+  height: 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+}
+
+.cart_price:hover {
+  text-decoration: underline;
+}
+
+.cart_icon {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}

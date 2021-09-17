@@ -1,0 +1,36 @@
+.search_container {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  color: black;
+  height: 25px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 3px;
+  outline: black;
+}
+
+.search:focus {
+  outline: white;
+}
+
+.search_button {
+  margin-left: 3px;
+  height: 23px;
+  width: 23px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search_button::after {
+  position: relative;
+  right: 2px;
+  bottom: 1px;
+  font-family: FontAwesome;
+  content: '\f002';
+  font-size: 16px;
+  color: #201b1b;
+}
