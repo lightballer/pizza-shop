@@ -1,0 +1,20 @@
+.contacts {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.contacts a {
+  text-decoration: none;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+.phone_numbers {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,8 @@
+.pizza_cards_container {
+  padding-top: 20px;
+  height: 1002px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}

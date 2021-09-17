@@ -1,0 +1,74 @@
+.pizza_card {
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.pizza_photo_container {
+  height: 222px;
+  width: 296px;
+}
+
+.pizza_photo {
+}
+
+.pizza_description_content {
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.pizza_name {
+  padding-left: 27px;
+}
+
+.pizza_composition {
+  padding-left: 27px;
+  color: rgb(193, 193, 193);
+}
+
+.buttons_block {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  color: white;
+  background-color: black;
+  outline: none;
+  border: 1px solid var(--color-orange);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(72, 71, 71);
+  color: rgb(193, 193, 193);
+}
+
+.active,
+.active:hover {
+  color: black;
+  background-color: white;
+}
+
+.pizza_card_footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pizza_add_to_cart {
+  background-color: red;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pizza_add_to_cart:hover {
+  background-color: rgb(189, 3, 3);
+  color: rgb(193, 193, 193);
+}
