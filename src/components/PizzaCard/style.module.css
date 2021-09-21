@@ -61,14 +61,39 @@
   align-items: center;
 }
 
-.pizza_add_to_cart {
+.pizza_add_to_cart,
+.pizza_plus,
+.pizza_minus {
   background-color: red;
   outline: none;
   border: none;
   cursor: pointer;
+  width: 99px;
 }
 
-.pizza_add_to_cart:hover {
+.pizza_plus,
+.pizza_minus {
+  width: 33px;
+}
+
+.hidden {
+  display: none;
+}
+
+.pizza_add_to_cart:hover,
+.pizza_plus:hover,
+.pizza_minus:hover {
   background-color: rgb(189, 3, 3);
   color: rgb(193, 193, 193);
+}
+
+.pizza_plus_minus_count_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items_count {
+  width: 33px;
+  text-align: center;
 }

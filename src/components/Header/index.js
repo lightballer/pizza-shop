@@ -4,10 +4,9 @@ import Navbar from '../Navbar';
 import Contacts from '../Contacts';
 import Search from '../Search';
 import Cart from '../Cart';
-
 import s from './style.module.css';
 
-export default function Header() {
+export default function Header({ currentCost }) {
   return (
     <header>
       <div className={s.header_content}>
@@ -18,7 +17,7 @@ export default function Header() {
       <div className={s.search_cart_container}>
         <div className={s.stub}></div>
         <Search />
-        <Cart />
+        <Cart currentCost={currentCost} />
       </div>
     </header>
   );

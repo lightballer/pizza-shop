@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.module.css';
+import { PAGES } from '../../constants';
 
 export default function Navbar() {
-  const PAGES = {
-    MAIN: '/',
-    MENU: '/menu',
-    ABOUT: '/about',
-  };
-  const [currentPage, setCurrentPage] = useState(PAGES.MAIN);
+  const [currentPage, setCurrentPage] = useState(() => {
+    return document.location.pathname;
+  });
   return (
     <nav>
       <NavLink

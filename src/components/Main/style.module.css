@@ -1,4 +1,5 @@
 main {
   background-color: var(--color-dark);
-  height: 5000px;
+  min-height: 400px;
+  overflow: hidden;
 }
