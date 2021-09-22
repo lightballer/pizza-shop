@@ -9,6 +9,7 @@ export default function PizzaCard({
   onRemoveFromCart,
 }) {
   const {
+    _id,
     name,
     description,
     // image_url,
@@ -19,10 +20,10 @@ export default function PizzaCard({
 
   const [price, setPrice] = useState(price_small);
   const [size, setSize] = useState(PIZZA_SIZE.SMALL);
-  const [itemsCount, setItemsCount] = useState({
-    SMALL: 0,
-    MEDIUM: 0,
-    LARGE: 0,
+  const [itemsCount, setItemsCount] = useState(() => {
+    let result = {};
+    Object.keys(PIZZA_SIZE).map(item => (result[item] = 0));
+    return result;
   });
   return (
     <div className={s.pizza_card}>
@@ -77,7 +78,10 @@ export default function PizzaCard({
           <button
             className={itemsCount[size] === 0 ? s.pizza_add_to_cart : s.hidden}
             onClick={() => {
-              onAddToCart(price);
+              // console.log('on add to cart');
+              // console.log(_id, size);
+              onAddToCart({ _id, size });
+              // onAddToCart(price);
               setItemsCount(prev => ({
                 ...prev,
                 [size]: prev[size] + 1,
@@ -96,7 +100,8 @@ export default function PizzaCard({
             <button
               className={s.pizza_plus}
               onClick={() => {
-                onAddToCart(price);
+                onAddToCart({ _id, size });
+                // onAddToCart(price);
                 setItemsCount(prev => ({
                   ...prev,
                   [size]: prev[size] + 1,
@@ -109,7 +114,8 @@ export default function PizzaCard({
             <button
               className={s.pizza_minus}
               onClick={() => {
-                onRemoveFromCart(price);
+                onRemoveFromCart({ _id, size });
+                // onRemoveFromCart(price);
                 setItemsCount(prev => ({
                   ...prev,
                   [size]: prev[size] - 1,
