@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from '../../images/logo.fw.png';
+import s from './Header.module.css';
 import Navbar from '../Navbar';
 import Contacts from '../Contacts';
 import Search from '../Search';
 import Cart from '../Cart';
-import s from './style.module.css';
 
 export default function Header({ currentCost, filterItems }) {
   return (

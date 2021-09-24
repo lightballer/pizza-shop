@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import s from './style.module.css';
+import s from './Search.module.css';
 
 export default function Search({ filterItems }) {
   const [text, setText] = useState('');

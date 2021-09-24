@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import margarita from '../../images/margarita.jpg';
-import s from './style.module.css';
+import s from './PizzaCard.module.css';
 import { PIZZA_SIZE } from '../../constants';
 
 export default function PizzaCard({

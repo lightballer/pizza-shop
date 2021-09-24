@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
+import s from './PizzaList.module.css';
 import PizzaCard from '../PizzaCard';
-import s from './style.module.css';
 
 function PizzaList({ pizzaArray, onAddToCart, onRemoveFromCart, cartState }) {
   useEffect(() => {});

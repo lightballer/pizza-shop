@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import './style.module.css';
+import './Main.module.css';
 import PizzaList from '../PizzaList';
 
 export default function Main({

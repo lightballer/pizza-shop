@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './style.module.css';
+import './Navbar.module.css';
 import { PAGES } from '../../constants';
 
 export default function Navbar() {
