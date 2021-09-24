@@ -6,7 +6,7 @@ import Search from '../Search';
 import Cart from '../Cart';
 import s from './style.module.css';
 
-export default function Header({ currentCost }) {
+export default function Header({ currentCost, filterItems }) {
   return (
     <header>
       <div className={s.header_content}>
@@ -16,7 +16,7 @@ export default function Header({ currentCost }) {
       </div>
       <div className={s.search_cart_container}>
         <div className={s.stub}></div>
-        <Search />
+        <Search filterItems={filterItems} />
         <Cart currentCost={currentCost} />
       </div>
     </header>

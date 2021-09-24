@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
   const [pizzaArray, setPizzaArray] = useState([]);
+  const [filteredArray, setFilteredArray] = useState([]);
   const [currentCost, setCurrentCost] = useState(0);
   const [cartState, setCartState] = useState({});
   useEffect(() => {
@@ -18,14 +19,6 @@ function App() {
         setPizzaArray(data);
       });
   }, []);
-
-  // const onAddToCart = price => {
-  //   setCurrentCost(prevPrice => prevPrice + price);
-  // };
-
-  // const onRemoveFromCart = price => {
-  //   setCurrentCost(prevPrice => prevPrice - price);
-  // };
 
   const countCost = ({ _id, size }) => {
     const SIZE_ACCORDANCE = {
@@ -42,23 +35,41 @@ function App() {
 
   const onAddToCart = ({ _id, size }) => {
     const count = cartState[_id]?.[size] || 0;
-    setCartState({ ...cartState, [_id]: { [size]: count + 1 } });
+    setCartState({
+      ...cartState,
+      [_id]: { ...cartState[_id], [size]: count + 1 },
+    });
     const cost = countCost({ _id, size });
     setCurrentCost(prevCost => prevCost + cost);
   };
 
   const onRemoveFromCart = ({ _id, size }) => {
     const count = cartState[_id]?.[size] || 0;
-    setCartState({ ...cartState, [_id]: { [size]: count - 1 } });
+    setCartState({
+      ...cartState,
+      [_id]: { ...cartState[_id], [size]: count - 1 },
+    });
     const cost = countCost({ _id, size });
     setCurrentCost(prevCost => prevCost - cost);
   };
 
+  const filterItems = option => {
+    option = option.toLowerCase();
+    const filtered = pizzaArray.filter(pizza => {
+      const name = pizza.name.toLowerCase();
+      return name.split(option).length > 1;
+    });
+    console.log('pizzaArray ' + pizzaArray);
+    console.log('filtered ' + filtered);
+    setFilteredArray(filtered);
+  };
+
   return (
     <div>
-      <Header currentCost={currentCost} />
+      <Header currentCost={currentCost} filterItems={filterItems} />
       <Main
-        pizzaArray={pizzaArray}
+        pizzaArray={filteredArray.length ? filteredArray : pizzaArray}
+        cartState={cartState}
         onAddToCart={onAddToCart}
         onRemoveFromCart={onRemoveFromCart}
       />

@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PizzaCard from '../PizzaCard';
 import s from './style.module.css';
 
-export default function PizzaList({
-  pizzaArray,
-  onAddToCart,
-  onRemoveFromCart,
-}) {
+function PizzaList({ pizzaArray, onAddToCart, onRemoveFromCart, cartState }) {
+  useEffect(() => {});
   return (
     <div className={s.pizza_cards_container}>
-      {pizzaArray.map((pizza, index) => (
-        <PizzaCard
-          pizzaData={pizza}
-          key={index}
-          onAddToCart={onAddToCart}
-          onRemoveFromCart={onRemoveFromCart}
-        />
-      ))}
+      {pizzaArray.map((pizzaData, index) => {
+        const id = pizzaData._id;
+        return (
+          <PizzaCard
+            pizzaData={pizzaData}
+            key={index}
+            pizzaCardState={cartState[id] ? cartState[id] : {}}
+            onAddToCart={onAddToCart}
+            onRemoveFromCart={onRemoveFromCart}
+          />
+        );
+      })}
+      ;
     </div>
   );
 }
+
+export default React.memo(PizzaList);

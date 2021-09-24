@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './style.module.css';
 
-export default function Search() {
+export default function Search({ filterItems }) {
+  const [text, setText] = useState('');
   return (
     <div className={s.search_container}>
-      <input className={s.search} type='text' placeholder='Поиск...' />
+      <input
+        className={s.search}
+        type='text'
+        placeholder='Поиск...'
+        value={text}
+        onChange={event => {
+          const value = event.target.value;
+          setText(value);
+          filterItems(value);
+        }}
+      />
       <button className={s.search_button} type='submit'></button>
     </div>
   );
