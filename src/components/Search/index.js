@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import s from './Search.module.css';
 
-export default function Search({ filterItems }) {
+const Search = ({ filterItems }) => {
   const [text, setText] = useState('');
   return (
     <div className={s.search_container}>
@@ -19,4 +19,6 @@ export default function Search({ filterItems }) {
       <button className={s.search_button} type='submit'></button>
     </div>
   );
-}
+};
+
+export default Search;

@@ -4,7 +4,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import React, { useState, useEffect } from 'react';
 
-function App() {
+const App = () => {
   const [pizzaArray, setPizzaArray] = useState([]);
   const [filteredArray, setFilteredArray] = useState([]);
   const [currentCost, setCurrentCost] = useState(0);
@@ -17,6 +17,7 @@ function App() {
       })
       .then(data => {
         setPizzaArray(data);
+        setFilteredArray(data);
       });
   }, []);
 
@@ -54,13 +55,12 @@ function App() {
   };
 
   const filterItems = option => {
+    if (!option) setFilteredArray(pizzaArray);
     option = option.toLowerCase();
     const filtered = pizzaArray.filter(pizza => {
       const name = pizza.name.toLowerCase();
       return name.split(option).length > 1;
     });
-    console.log('pizzaArray ' + pizzaArray);
-    console.log('filtered ' + filtered);
     setFilteredArray(filtered);
   };
 
@@ -68,7 +68,7 @@ function App() {
     <div>
       <Header currentCost={currentCost} filterItems={filterItems} />
       <Main
-        pizzaArray={filteredArray.length ? filteredArray : pizzaArray}
+        pizzaArray={filteredArray}
         cartState={cartState}
         onAddToCart={onAddToCart}
         onRemoveFromCart={onRemoveFromCart}
@@ -76,6 +76,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

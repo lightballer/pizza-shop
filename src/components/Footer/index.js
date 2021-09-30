@@ -1,10 +1,12 @@
 import React from 'react';
 import './Footer.module.css';
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer>
       <div>Made by Artem Bokii - 2021</div>
     </footer>
   );
-}
+};
+
+export default Footer;

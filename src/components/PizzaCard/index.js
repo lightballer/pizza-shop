@@ -3,12 +3,12 @@ import margarita from '../../images/margarita.jpg';
 import s from './PizzaCard.module.css';
 import { PIZZA_SIZE } from '../../constants';
 
-export default function PizzaCard({
+const PizzaCard = ({
   pizzaData,
   pizzaCardState,
   onAddToCart,
   onRemoveFromCart,
-}) {
+}) => {
   const {
     _id,
     name,
@@ -129,4 +129,6 @@ export default function PizzaCard({
       </div>
     </div>
   );
-}
+};
+
+export default PizzaCard;

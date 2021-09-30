@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Cart.module.css';
 
-export default function Cart({ currentCost }) {
+const Cart = ({ currentCost }) => {
   return (
     <div className={s.cart_container}>
       <div className={s.cart_price}>{currentCost} грн.</div>
@@ -10,4 +10,6 @@ export default function Cart({ currentCost }) {
       </div>
     </div>
   );
-}
+};
+
+export default Cart;

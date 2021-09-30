@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.module.css';
 import { PAGES } from '../../constants';
 
-export default function Navbar() {
+const Navbar = () => {
   const [currentPage, setCurrentPage] = useState(() => {
     return document.location.pathname;
   });
@@ -38,4 +38,6 @@ export default function Navbar() {
       </NavLink>
     </nav>
   );
-}
+};
+
+export default Navbar;

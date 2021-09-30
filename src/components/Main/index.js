@@ -3,12 +3,7 @@ import { Route } from 'react-router-dom';
 import './Main.module.css';
 import PizzaList from '../PizzaList';
 
-export default function Main({
-  pizzaArray,
-  onAddToCart,
-  onRemoveFromCart,
-  cartState,
-}) {
+const Main = ({ pizzaArray, onAddToCart, onRemoveFromCart, cartState }) => {
   return (
     <main>
       <Route exact path='/'>
@@ -31,4 +26,6 @@ export default function Main({
       </Route>
     </main>
   );
-}
+};
+
+export default Main;

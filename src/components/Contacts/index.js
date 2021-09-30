@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Contacts.module.css';
 
-export default function Contacts() {
+const Contacts = () => {
   return (
     <div className={s.contacts}>
       <div className={s.phone_numbers}>
@@ -11,4 +11,6 @@ export default function Contacts() {
       </div>
     </div>
   );
-}
+};
+
+export default Contacts;

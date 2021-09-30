@@ -6,7 +6,7 @@ import Contacts from '../Contacts';
 import Search from '../Search';
 import Cart from '../Cart';
 
-export default function Header({ currentCost, filterItems }) {
+const Header = ({ currentCost, filterItems }) => {
   return (
     <header>
       <div className={s.header_content}>
@@ -21,4 +21,6 @@ export default function Header({ currentCost, filterItems }) {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
