@@ -61,6 +61,7 @@ const App = () => {
       const name = pizza.name.toLowerCase();
       return name.split(option).length > 1;
     });
+    if (!filtered.length) filtered.push(null);
     setFilteredArray(filtered);
   };
 

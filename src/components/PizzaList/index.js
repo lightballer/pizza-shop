@@ -11,7 +11,9 @@ const PizzaList = ({
   useEffect(() => {});
   return (
     <div className={s.pizza_cards_container}>
-      {pizzaArray.length ? (
+      {pizzaArray.includes(null) ? (
+        <div>No pizza found!</div>
+      ) : (
         pizzaArray.map((pizzaData, index) => {
           const id = pizzaData._id;
           return (
@@ -24,8 +26,6 @@ const PizzaList = ({
             />
           );
         })
-      ) : (
-        <div>No pizza found!</div>
       )}
     </div>
   );
